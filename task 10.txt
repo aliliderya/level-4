@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double netice, eded;
+    char emel;
+
+    cout << "Birinci ededi daxil edin: ";
+    cin >> netice;
+
+    while (true) {
+        cout << "Emel daxil edin (+, -, *, /, =): ";
+        cin >> emel;
+
+        if (emel == '=') break;
+
+        cout << "Növbəti ededi daxil edin: ";
+        cin >> eded;
+
+        if (emel == '+') netice = netice + eded;
+        else if (emel == '-') netice = netice - eded;
+        else if (emel == '*') netice = netice * eded;
+        else if (emel == '/') netice = netice / eded;
+        else cout << "Yanlis emel daxil etdiniz!" << endl;
+    }
+
+    cout << "Netice: " << netice;
+    return 0;
+}
